@@ -504,10 +504,6 @@ body {
         1px solid
         rgba(228,203,145,.82);
 
-    /*
-       الخلفية الشفافة خلف الكلام فقط
-    */
-
     background:
         rgba(43,67,49,.13);
 
@@ -638,7 +634,6 @@ body {
 
 /* =========================================================
    ENDING
-   محذوف من الصفحة حالياً
 ========================================================= */
 
 .message-ending {
@@ -670,7 +665,6 @@ body {
 
 /* =========================================================
    DETAILS
-   كل معلومة تتموضع حسب مركز الأيقونة
 ========================================================= */
 
 .details-list {
@@ -713,9 +707,9 @@ body {
 }
 
 
-/*
-   مراكز المعلومات مطابقة لمراكز الأيقونات
-*/
+/* =========================================================
+   POSITIONS
+========================================================= */
 
 .detail:nth-child(1) {
     top: 25%;
@@ -727,18 +721,10 @@ body {
 
 .detail:nth-child(3) {
     top: 63%;
-
-    /*
-       القاعة تنزل لمركز أيقونة الموقع
-    */
 }
 
 .detail:nth-child(4) {
     top: 82%;
-
-    /*
-       التنويه ينزل لمركز أيقونة الأطفال
-    */
 }
 
 
@@ -1065,39 +1051,50 @@ body {
 
         height: 71%;
 
-        padding: 7% 6%;
+        padding: 8% 6%;
 
-        /*
-           يمنع تكدس النص في الأعلى
-        */
-        justify-content: center;
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        text-align: center;
+
+        overflow: hidden;
     }
 
 
     .basmala {
+        width: 100%;
+
         font-size: 17px;
 
         line-height: 1.35;
-
-        margin-bottom: 4%;
-    }
-
-
-    .quran-verse {
-        font-size: 12.5px;
-
-        line-height: 1.9;
 
         margin-bottom: 5%;
     }
 
 
+    .quran-verse {
+        width: 100%;
+
+        font-size: 12.5px;
+
+        line-height: 1.9;
+
+        margin-bottom: 7%;
+    }
+
+
     .message-text {
+        width: 94%;
+
         font-size: 12.8px;
 
-        line-height: 2;
-
-        width: 94%;
+        line-height: 2.05;
     }
 
 
@@ -1111,6 +1108,8 @@ body {
     ===================================================== */
 
     .details-list {
+        position: absolute;
+
         inset: 0;
 
         width: 100%;
@@ -1124,15 +1123,21 @@ body {
 
         width: 57%;
 
+        height: auto;
+
         transform: translateY(-50%);
 
-        height: auto;
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        text-align: right;
     }
 
-
-    /*
-       نفس مراكز الأيقونات على الجوال
-    */
 
     .detail:nth-child(1) {
         top: 25%;
@@ -1157,6 +1162,8 @@ body {
     .detail-label {
         font-size: 15px;
 
+        line-height: 1.2;
+
         margin-bottom: 2%;
     }
 
@@ -1175,6 +1182,8 @@ body {
 
     .detail.children .detail-value {
         font-size: 15px;
+
+        line-height: 1.25;
     }
 
 
@@ -1233,36 +1242,41 @@ body {
     }
 
 
-    /* PAGE 2 */
+    /* =====================================================
+       PAGE 2
+    ===================================================== */
 
     .message-box {
         top: 10%;
 
         height: 72%;
 
-        padding:
-            6% 6%;
+        padding: 7% 6%;
+
+        justify-content: flex-start;
     }
 
 
     .basmala {
-        margin-bottom: 3%;
-    }
-
-
-    .quran-verse {
-        line-height: 1.8;
-
         margin-bottom: 4%;
     }
 
 
-    .message-text {
-        line-height: 1.9;
+    .quran-verse {
+        line-height: 1.85;
+
+        margin-bottom: 6%;
     }
 
 
-    /* PAGE 3 */
+    .message-text {
+        line-height: 1.95;
+    }
+
+
+    /* =====================================================
+       PAGE 3
+    ===================================================== */
 
     .detail:nth-child(1) {
         top: 24%;
