@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+>
+
+<title>Letters | Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #080706;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Amiri", serif;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+:root {
+    --gold: #c9a45c;
+    --gold-light: #e4cb91;
+    --gold-dark: #a47d38;
+    --ivory: #eee3cb;
+    --black: #100e0a;
+}
+
+
+/* =========================================================
+   MAIN CANVAS
+========================================================= */
+
+.invitation {
+    position: relative;
+
+    width: min(100vw, calc(100vh * 9 / 16));
+    height: min(100vh, calc(100vw * 16 / 9));
+
+    aspect-ratio: 9 / 16;
+
+    overflow: hidden;
+
+    background: #080706;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PAGES
+========================================================= */
+
+.page {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: scale(1.015);
+
+    transition:
+        opacity .55s ease,
+        transform .55s ease,
+        visibility 0s linear .55s;
+
+    z-index: 1;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: scale(1);
+
+    z-index: 10;
+
+    transition:
+        opacity .55s ease,
+        transform .55s ease,
+        visibility 0s linear 0s;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    user-select: none;
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   LETTERS
+========================================================= */
+
+.letters {
+    position: absolute;
+
+    top: 3.2%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--gold-light);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(24px, 4.6vw, 39px);
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+
+    line-height: 1;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.55);
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   MADE BY LETTERS
+========================================================= */
+
+.made {
+    position: absolute;
+
+    bottom: 2.8%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--gold-light);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(11px, 2.7vw, 17px);
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,.6);
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.button {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 35%;
+
+    min-height: 5.8%;
+
+    border: 1px solid var(--gold);
+
+    background:
+        rgba(16,13,9,.62);
+
+    color: var(--gold-light);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size: clamp(17px, 3.1vw, 28px);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(228,203,145,.15),
+        0 4px 18px rgba(0,0,0,.25);
+
+    z-index: 30;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.button::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 4px;
+
+    border: 1px solid rgba(228,203,145,.35);
+
+    pointer-events: none;
+}
+
+.button:active {
+    transform:
+        translateX(-50%)
+        scale(.97);
+}
+
+
+/* =========================================================
+   PAGE 1
+========================================================= */
+
+.page1-content {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   COUPLE LOGO
+========================================================= */
+
+.couple-logo {
+    position: absolute;
+
+    top: 10%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 22%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    opacity: 1;
+
+    filter:
+        brightness(1.35)
+        contrast(1.12)
+        drop-shadow(
+            0 3px 8px rgba(0,0,0,.65)
+        );
+
+    z-index: 15;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.page1-intro {
+    position: absolute;
+
+    top: 20.5%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    color: var(--gold-light);
+
+    font-size: clamp(17px, 3.5vw, 28px);
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.55);
+}
+
+
+/* =========================================================
+   NAMES
+========================================================= */
+
+.page1-names {
+    position: absolute;
+
+    top: 29%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 88%;
+
+    text-align: center;
+
+    color: var(--ivory);
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.65);
+}
+
+.page1-name {
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size: clamp(45px, 8.5vw, 74px);
+
+    font-weight: 700;
+
+    line-height: .95;
+}
+
+.page1-and {
+    margin: 1.8% 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(27px, 4.5vw, 42px);
+
+    color: var(--gold-light);
+
+    direction: ltr;
+
+    line-height: .9;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.page1-date {
+    position: absolute;
+
+    top: 56.5%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(23px, 4vw, 37px);
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: var(--gold-light);
+
+    white-space: nowrap;
+
+    direction: ltr;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.6);
+}
+
+
+/* =========================================================
+   PAGE 1 BUTTON
+========================================================= */
+
+.page1-button {
+    bottom: 10.5%;
+}
+
+
+/* =========================================================
+   PAGE 2
+========================================================= */
+
+.page2-content {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   MESSAGE BOX
+========================================================= */
+
+.message-box {
+    position: absolute;
+
+    top: 11.5%;
+
+    left: 10%;
+
+    width: 80%;
+
+    height: 70%;
+
+    padding:
+        5% 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(228,203,145,.82);
+
+    background:
+        rgba(43,67,49,.16);
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(201,164,92,.16);
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   INNER BORDER
+========================================================= */
+
+.message-box::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border:
+        1px solid
+        rgba(228,203,145,.22);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BASMALA
+========================================================= */
+
+.basmala {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    color: var(--gold-light);
+
+    font-size:
+        clamp(
+            17px,
+            2.8vw,
+            27px
+        );
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    margin-bottom: 4.5%;
+}
+
+
+/* =========================================================
+   QURAN VERSE
+========================================================= */
+
+.quran-verse {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    color: var(--gold-light);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(
+            11.5px,
+            1.9vw,
+            18px
+        );
+
+    font-weight: 400;
+
+    line-height: 1.85;
+
+    text-align: center;
+
+    margin-bottom: 5%;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.6);
+}
+
+
+/* =========================================================
+   MAIN MESSAGE
+========================================================= */
+
+.message-text {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    color: var(--ivory);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(
+            11.5px,
+            1.9vw,
+            18px
+        );
+
+    font-weight: 400;
+
+    line-height: 2.05;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,.55);
+}
+
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+.message-ending {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    margin-top: 5%;
+
+    padding-top: 4%;
+
+    border-top:
+        1px solid
+        rgba(201,164,92,.4);
+
+    color: var(--gold-light);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(
+            11.5px,
+            1.85vw,
+            17px
+        );
+
+    line-height: 1.7;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,.55);
+}
+
+
+/* =========================================================
+   PAGE 2 BUTTON
+========================================================= */
+
+.page2-button {
+    bottom: 7%;
+}
+
+
+/* =========================================================
+   PAGE 3
+========================================================= */
+
+.page3-content {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   DETAILS LIST
+========================================================= */
+
+.details-list {
+    position: absolute;
+
+    top: 18%;
+
+    right: 7%;
+
+    width: 57%;
+
+    height: 61%;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   INDIVIDUAL DETAIL
+========================================================= */
+
+.detail {
+    position: absolute;
+
+    right: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.detail:nth-child(1) {
+
+    top: 0%;
+
+    height: 23%;
+}
+
+
+/* =========================================================
+   TIME
+========================================================= */
+
+.detail:nth-child(2) {
+
+    top: 25.5%;
+
+    height: 23%;
+}
+
+
+/* =========================================================
+   HALL
+   محاذاة دقيقة مع أيقونة الموقع
+========================================================= */
+
+.detail:nth-child(3) {
+
+    top: 58%;
+
+    height: auto;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   CHILDREN NOTICE
+   محاذاة دقيقة مع أيقونة الأطفال
+========================================================= */
+
+.detail:nth-child(4) {
+
+    top: 87%;
+
+    height: auto;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.detail-label {
+    color: var(--gold);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(
+            14px,
+            2.4vw,
+            22px
+        );
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 1%;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,.55);
+}
+
+
+/* =========================================================
+   DATE POSITION
+========================================================= */
+
+.detail:nth-child(1) .detail-label {
+
+    position: relative;
+
+    top: -5%;
+}
+
+.detail:nth-child(1) .detail-value {
+
+    position: relative;
+
+    top: 5%;
+}
+
+
+/* =========================================================
+   TIME POSITION
+========================================================= */
+
+.detail:nth-child(2) .detail-label,
+.detail:nth-child(2) .detail-value {
+
+    position: relative;
+
+    top: 5%;
+}
+
+
+/* =========================================================
+   VALUE
+========================================================= */
+
+.detail-value {
+    color: var(--ivory);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(
+            16px,
+            2.7vw,
+            25px
+        );
+
+    font-weight: 400;
+
+    line-height: 1.25;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.65);
+}
+
+
+/* =========================================================
+   CHILDREN
+========================================================= */
+
+.detail.children .detail-value {
+
+    font-size:
+        clamp(
+            14px,
+            2.35vw,
+            22px
+        );
+}
+
+
+/* =========================================================
+   PAGE 3 BUTTON
+========================================================= */
+
+.page3-button {
+    bottom: 8.5%;
+}
+
+
+/* =========================================================
+   PAGE 4
+========================================================= */
+
+.page4-content {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SWAN LIGHT
+========================================================= */
+
+.page4-content::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translateX(-50%);
+
+    width: 82%;
+
+    height: 38%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(228,203,145,.16) 0%,
+            rgba(228,203,145,.07) 32%,
+            rgba(228,203,145,0) 72%
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   VENUE
+========================================================= */
+
+.venue {
+    position: absolute;
+
+    top: 28%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 86%;
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+
+.venue-name {
+    color: var(--ivory);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(
+            37px,
+            6.2vw,
+            58px
+        );
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    text-shadow:
+        0 3px 13px rgba(0,0,0,.7);
+}
+
+
+/* =========================================================
+   VENUE MESSAGE
+========================================================= */
+
+.venue-message {
+    position: absolute;
+
+    top: 57%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 72%;
+
+    padding:
+        2.2% 4%;
+
+    color: var(--gold-light);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(
+            16px,
+            2.4vw,
+            23px
+        );
+
+    line-height: 1.9;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.65);
+
+    background:
+        rgba(43,67,49,.14);
+
+    border:
+        1px solid
+        rgba(201,164,92,.50);
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(228,203,145,.08);
+
+    backdrop-filter:
+        blur(.8px);
+
+    -webkit-backdrop-filter:
+        blur(.8px);
+
+    z-index: 15;
+}
+
+
+/* =========================================================
+   MAP BUTTON
+========================================================= */
+
+.maps-button {
+    bottom: 10%;
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .invitation {
+        width: 100vw;
+
+        height: 177.777777vw;
+
+        max-height: 100vh;
+    }
+
+
+    .letters {
+        font-size: 26px;
+    }
+
+
+    .made {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       PAGE 1
+    ===================================================== */
+
+    .couple-logo {
+        width: 22%;
+
+        top: 10%;
+    }
+
+
+    .page1-intro {
+        top: 20%;
+
+        font-size: 18px;
+    }
+
+
+    .page1-names {
+        top: 29%;
+    }
+
+
+    .page1-name {
+        font-size: 49px;
+
+        line-height: .92;
+    }
+
+
+    .page1-and {
+        font-size: 29px;
+
+        margin: 1.5% 0;
+    }
+
+
+    .page1-date {
+        top: 57%;
+
+        font-size: 24px;
+    }
+
+
+    /* =====================================================
+       PAGE 2 MOBILE
+    ===================================================== */
+
+    .message-box {
+
+        top: 11%;
+
+        height: 71%;
+
+        padding:
+            5% 5.5%;
+
+        background:
+            rgba(43,67,49,.16);
+
+        justify-content:
+            flex-start;
+    }
+
+
+    .basmala {
+
+        font-size: 17px;
+
+        margin-bottom: 4%;
+    }
+
+
+    .quran-verse {
+
+        font-size: 12px;
+
+        line-height: 1.85;
+
+        margin-bottom: 4.5%;
+    }
+
+
+    .message-text {
+
+        font-size: 12.3px;
+
+        line-height: 2;
+    }
+
+
+    .message-ending {
+
+        font-size: 12px;
+
+        line-height: 1.65;
+
+        margin-top: 0%;
+
+        padding-top: 0%;
+    }
+
+
+    .page2-button {
+        bottom: 6.5%;
+    }
+
+
+    /* =====================================================
+       PAGE 3 MOBILE
+    ===================================================== */
+
+    .details-list {
+
+        top: 18%;
+
+        right: 7%;
+
+        width: 57%;
+
+        height: 61%;
+    }
+
+
+    .detail-label {
+
+        font-size: 15px;
+
+        margin-bottom: 1%;
+    }
+
+
+    .detail-value {
+
+        font-size: 17px;
+
+        line-height: 1.2;
+    }
+
+
+    .detail.children .detail-value {
+
+        font-size: 15px;
+    }
+
+
+    /* التاريخ */
+
+    .detail:nth-child(1) {
+
+        top: 0%;
+
+        height: 23%;
+    }
+
+
+    .detail:nth-child(1) .detail-label {
+
+        top: -5%;
+    }
+
+
+    .detail:nth-child(1) .detail-value {
+
+        top: 5%;
+    }
+
+
+    /* الوقت */
+
+    .detail:nth-child(2) {
+
+        top: 25.5%;
+
+        height: 23%;
+    }
+
+
+    .detail:nth-child(2) .detail-label,
+    .detail:nth-child(2) .detail-value {
+
+        top: 5%;
+    }
+
+
+    /* القاعة */
+
+    .detail:nth-child(3) {
+
+        top: 58%;
+
+        height: auto;
+
+        transform: none;
+    }
+
+
+    /* التنويه */
+
+    .detail:nth-child(4) {
+
+        top: 87%;
+
+        height: auto;
+
+        transform: none;
+    }
+
+
+    /* =====================================================
+       PAGE 4
+    ===================================================== */
+
+    .venue-name {
+        font-size: 39px;
+    }
+
+
+    .venue-message {
+
+        font-size: 16px;
+
+        width: 74%;
+
+        padding:
+            2.5% 4%;
+
+        background:
+            rgba(43,67,49,.11);
+    }
+
+}
+
+
+/* =========================================================
+   SHORT PHONES
+========================================================= */
+
+@media (max-height: 700px) {
+
+    .letters {
+        top: 2.8%;
+    }
+
+
+    .couple-logo {
+        top: 8.5%;
+    }
+
+
+    .page1-intro {
+        top: 18%;
+    }
+
+
+    .page1-names {
+        top: 27%;
+    }
+
+
+    .page1-date {
+        top: 54%;
+    }
+
+
+    .message-box {
+
+        top: 10%;
+
+        height: 72%;
+    }
+
+
+    .details-list {
+
+        top: 17%;
+
+        height: 62%;
+    }
+
+
+    .venue {
+        top: 25%;
+    }
+
+}
+
+
+/* =========================================================
+   PREVENT SELECTION / DRAG
+========================================================= */
+
+img {
+    -webkit-user-drag: none;
+
+    user-select: none;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="invitation">
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<section
+    class="page page-1 active"
+    id="page1"
+>
+
+    <img
+        class="background"
+        src="backgroundw1.png"
+        alt=""
+    >
+
+    <div class="letters">
+        Letters
+    </div>
+
+
+    <div class="page1-content">
+
+
+        <img
+            class="couple-logo"
+            src="logos.png"
+            alt="سمر وأحمد"
+        >
+
+
+        <div class="page1-intro">
+            بكل حب ندعوكم
+        </div>
+
+
+        <div class="page1-names">
+
+            <div class="page1-name">
+                سمر
+            </div>
+
+            <div class="page1-and">
+                &
+            </div>
+
+            <div class="page1-name">
+                أحمد
+            </div>
+
+        </div>
+
+
+        <div class="page1-date">
+            27 August
+        </div>
+
+
+        <button
+            class="button page1-button"
+            type="button"
+            onclick="openInvitation()"
+        >
+            الدعوة
+        </button>
+
+
+    </div>
+
+
+    <div class="made">
+        made by letters
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2
+===================================================== -->
+
+<section
+    class="page page-2"
+    id="page2"
+>
+
+    <img
+        class="background"
+        src="backgroundw2.png"
+        alt=""
+    >
+
+    <div class="letters">
+        Letters
+    </div>
+
+
+    <div class="page2-content">
+
+
+        <div class="message-box">
+
+
+            <div class="basmala">
+                بسم الله الرحمن الرحيم
+            </div>
+
+
+            <div class="quran-verse">
+                ﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم
+                مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+                لِّتَسْكُنُوا إِلَيْهَا
+                وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+                إِنَّ فِي ذَٰلِكَ لَآيَاتٍ
+                لِّقَوْمٍ يَتَفَكَّرُونَ﴾
+            </div>
+
+
+            <div class="message-text">
+                الأهل والأحبة والأصدقاء الكرام،
+                <br>
+                يغمرنا الفرح والسرور، ويحلو اللقاء بوجود من نحب.
+                <br>
+                يسرنا أن نشارككم لحظات العمر السعيدة،
+                <br>
+                ونتشرف بدعوتكم لحضور حفل زفافنا المبارك.
+            </div>
+
+
+             
+
+
+        </div>
+
+
+        <button
+            class="button page2-button"
+            type="button"
+            onclick="goToPage(2)"
+        >
+            التفاصيل
+        </button>
+
+
+    </div>
+
+
+    <div class="made">
+        made by letters
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 3
+===================================================== -->
+
+<section
+    class="page page-3"
+    id="page3"
+>
+
+    <img
+        class="background"
+        src="backgroundw3.png"
+        alt=""
+    >
+
+    <div class="letters">
+        Letters
+    </div>
+
+
+    <div class="page3-content">
+
+
+        <div class="details-list">
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    التاريخ
+                </div>
+
+                <div class="detail-value">
+                    27 أغسطس 2026
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    الوقت
+                </div>
+
+                <div class="detail-value">
+                    9:00 مساءً
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    القاعة
+                </div>
+
+                <div class="detail-value">
+                    قاعة ليلتي
+                </div>
+
+            </div>
+
+
+            <div class="detail children">
+
+                <div class="detail-label">
+                    تنويه
+                </div>
+
+                <div class="detail-value">
+                    جنة الأطفال منازلهم
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <a
+            class="button page3-button"
+            href="#"
+            onclick="goToPage(3); return false;"
+        >
+            الموقع
+        </a>
+
+
+    </div>
+
+
+    <div class="made">
+        made by letters
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 4
+===================================================== -->
+
+<section
+    class="page page-4"
+    id="page4"
+>
+
+    <img
+        class="background"
+        src="backgroundw4.png"
+        alt=""
+    >
+
+    <div class="letters">
+        Letters
+    </div>
+
+
+    <div class="page4-content">
+
+
+        <div class="venue">
+
+            <div class="venue-name">
+                قاعة ليلتي
+            </div>
+
+        </div>
+
+
+        <div class="venue-message">
+
+            حضوركم يكمل فرحتنا
+            <br>
+            وننتظركم بكل حب
+
+        </div>
+
+
+        <a
+            class="button maps-button"
+            href="https://www.google.com/maps/search/?api=1&query=قاعة+ليلتي"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            خريطة قوقل
+        </a>
+
+
+    </div>
+
+
+    <div class="made">
+        made by letters
+    </div>
+
+</section>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+    id="weddingMusic"
+    src="music.w.mp3"
+    preload="auto"
+    loop
+></audio>
+
+
+
+<script>
+
+/* =========================================================
+   PAGE SYSTEM
+========================================================= */
+
+const pages =
+    document.querySelectorAll(".page");
+
+let currentPage = 0;
+
+let changing = false;
+
+
+function goToPage(index) {
+
+    if (
+        index < 0 ||
+        index >= pages.length
+    ) {
+        return;
+    }
+
+    if (
+        index === currentPage ||
+        changing
+    ) {
+        return;
+    }
+
+    changing = true;
+
+
+    pages[currentPage]
+        .classList
+        .remove("active");
+
+
+    currentPage = index;
+
+
+    pages[currentPage]
+        .classList
+        .add("active");
+
+
+    setTimeout(
+        function() {
+            changing = false;
+        },
+        600
+    );
+
+}
+
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+const music =
+    document.getElementById(
+        "weddingMusic"
+    );
+
+
+function openInvitation() {
+
+    music.volume = 0.45;
+
+    music.play().catch(
+        function() {}
+    );
+
+    goToPage(1);
+}
+
+
+/* =========================================================
+   SWIPE
+========================================================= */
+
+let startX = 0;
+let startY = 0;
+
+
+const invitation =
+    document.querySelector(
+        ".invitation"
+    );
+
+
+invitation.addEventListener(
+    "touchstart",
+    function(event) {
+
+        startX =
+            event.changedTouches[0]
+                .screenX;
+
+        startY =
+            event.changedTouches[0]
+                .screenY;
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+invitation.addEventListener(
+    "touchend",
+    function(event) {
+
+        const endX =
+            event.changedTouches[0]
+                .screenX;
+
+        const endY =
+            event.changedTouches[0]
+                .screenY;
+
+
+        const diffX =
+            endX - startX;
+
+        const diffY =
+            endY - startY;
+
+
+        if (
+            Math.abs(diffX) > 55 &&
+            Math.abs(diffX) > Math.abs(diffY)
+        ) {
+
+            if (diffX < 0) {
+
+                goToPage(
+                    currentPage + 1
+                );
+
+            }
+            else {
+
+                goToPage(
+                    currentPage - 1
+                );
+
+            }
+
+        }
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+/* =========================================================
+   KEYBOARD
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+            goToPage(
+                currentPage + 1
+            );
+
+        }
+
+
+        if (
+            event.key === "ArrowRight"
+        ) {
+
+            goToPage(
+                currentPage - 1
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   PREVENT DRAG
+========================================================= */
+
+document
+    .querySelectorAll("img")
+    .forEach(
+        function(image) {
+
+            image.addEventListener(
+                "dragstart",
+                function(event) {
+                    event.preventDefault();
+                }
+            );
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
