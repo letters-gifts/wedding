@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
 
 <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  name="viewport"
+  content="width=device-width, initial-scale=1.0,
+  maximum-scale=1.0, user-scalable=no"
 >
 
-<title>Letters | Wedding Invitation</title>
+<title>سمر & أحمد | Letters</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
-    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-    rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600&display=swap"
+  rel="stylesheet"
 >
 
 <style>
@@ -26,25 +26,25 @@
 ========================================================= */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-    background: #080706;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Amiri", serif;
+  background: #080706;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Amiri", serif;
 }
 
 
@@ -53,31 +53,38 @@ body {
 ========================================================= */
 
 :root {
-    --gold: #c9a45c;
-    --gold-light: #e4cb91;
-    --gold-dark: #a47d38;
-    --ivory: #eee3cb;
-    --black: #100e0a;
+  --gold: #c9a45c;
+  --gold-light: #e4cb91;
+  --gold-dark: #a47d38;
+  --ivory: #eee3cb;
+  --black: #100e0a;
 }
 
 
 /* =========================================================
-   MAIN CANVAS
+   MAIN INVITATION
 ========================================================= */
 
 .invitation {
-    position: relative;
+  position: relative;
 
-    width: min(100vw, calc(100vh * 9 / 16));
-    height: min(100vh, calc(100vw * 16 / 9));
+  width: min(
+    100vw,
+    calc(100vh * 9 / 16)
+  );
 
-    aspect-ratio: 9 / 16;
+  height: min(
+    100vh,
+    calc(100vw * 16 / 9)
+  );
 
-    overflow: hidden;
+  aspect-ratio: 9 / 16;
 
-    background: #080706;
+  overflow: hidden;
 
-    flex-shrink: 0;
+  background: #080706;
+
+  flex-shrink: 0;
 }
 
 
@@ -86,42 +93,45 @@ body {
 ========================================================= */
 
 .page {
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  inset: 0;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 
-    transform: scale(1.015);
+  pointer-events: none;
 
-    transition:
-        opacity .55s ease,
-        transform .55s ease,
-        visibility 0s linear .55s;
+  transform: scale(1.015);
 
-    z-index: 1;
+  transition:
+    opacity .55s ease,
+    transform .55s ease,
+    visibility 0s linear .55s;
+
+  z-index: 1;
 }
 
 .page.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+  opacity: 1;
 
-    transform: scale(1);
+  visibility: visible;
 
-    z-index: 10;
+  pointer-events: auto;
 
-    transition:
-        opacity .55s ease,
-        transform .55s ease,
-        visibility 0s linear 0s;
+  transform: scale(1);
+
+  z-index: 10;
+
+  transition:
+    opacity .55s ease,
+    transform .55s ease,
+    visibility 0s linear 0s;
 }
 
 
@@ -130,20 +140,20 @@ body {
 ========================================================= */
 
 .background {
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  inset: 0;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    object-fit: cover;
-    object-position: center;
+  object-fit: cover;
+  object-position: center;
 
-    user-select: none;
-    pointer-events: none;
+  user-select: none;
+  pointer-events: none;
 
-    z-index: 0;
+  z-index: 0;
 }
 
 
@@ -152,34 +162,39 @@ body {
 ========================================================= */
 
 .letters {
-    position: absolute;
+  position: absolute;
 
-    top: 3.2%;
+  top: 3.2%;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 
-    color: var(--gold-light);
+  color: var(--gold-light);
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-    font-size: clamp(24px, 4.6vw, 39px);
+  font-size:
+    clamp(
+      24px,
+      4.6vw,
+      39px
+    );
 
-    font-weight: 600;
+  font-weight: 600;
 
-    letter-spacing: 4px;
+  letter-spacing: 4px;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    line-height: 1;
+  line-height: 1;
 
-    text-shadow:
-        0 2px 8px rgba(0,0,0,.55);
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.55);
 
-    z-index: 20;
+  z-index: 20;
 }
 
 
@@ -188,103 +203,122 @@ body {
 ========================================================= */
 
 .made {
-    position: absolute;
+  position: absolute;
 
-    bottom: 2.8%;
+  bottom: 2.8%;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 
-    color: var(--gold-light);
+  color: var(--gold-light);
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-    font-size: clamp(11px, 2.7vw, 17px);
+  font-size:
+    clamp(
+      11px,
+      2.7vw,
+      17px
+    );
 
-    font-weight: 500;
+  font-weight: 500;
 
-    letter-spacing: 2px;
+  letter-spacing: 2px;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    text-shadow:
-        0 2px 7px rgba(0,0,0,.6);
+  text-shadow:
+    0 2px 7px rgba(0,0,0,.6);
 
-    z-index: 20;
+  z-index: 20;
 }
 
 
 /* =========================================================
-   BUTTON
+   BUTTONS
 ========================================================= */
 
 .button {
-    position: absolute;
+  position: absolute;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 
-    width: 35%;
+  width: 35%;
 
-    min-height: 5.8%;
+  min-height: 5.8%;
 
-    border: 1px solid var(--gold);
+  border:
+    1px solid
+    var(--gold);
 
-    background:
-        rgba(16,13,9,.62);
+  background:
+    rgba(16,13,9,.62);
 
-    color: var(--gold-light);
+  color:
+    var(--gold-light);
 
-    font-family:
-        "Amiri",
-        serif;
+  font-family:
+    "Amiri",
+    serif;
 
-    font-size: clamp(17px, 3.1vw, 28px);
+  font-size:
+    clamp(
+      17px,
+      3.1vw,
+      28px
+    );
 
-    font-weight: 700;
+  font-weight: 700;
 
-    line-height: 1;
+  line-height: 1;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    display: flex;
+  display: flex;
 
-    align-items: center;
-    justify-content: center;
+  align-items: center;
 
-    text-decoration: none;
+  justify-content: center;
 
-    box-shadow:
-        inset 0 0 0 1px rgba(228,203,145,.15),
-        0 4px 18px rgba(0,0,0,.25);
+  text-decoration: none;
 
-    z-index: 30;
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(228,203,145,.15),
 
-    transition:
-        background .2s ease,
-        transform .2s ease;
+    0 4px 18px
+    rgba(0,0,0,.25);
+
+  z-index: 30;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
 }
 
 .button::before {
-    content: "";
+  content: "";
 
-    position: absolute;
+  position: absolute;
 
-    inset: 4px;
+  inset: 4px;
 
-    border: 1px solid rgba(228,203,145,.35);
+  border:
+    1px solid
+    rgba(228,203,145,.35);
 
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .button:active {
-    transform:
-        translateX(-50%)
-        scale(.97);
+  transform:
+    translateX(-50%)
+    scale(.97);
 }
 
 
@@ -293,570 +327,569 @@ body {
 ========================================================= */
 
 .page1-content {
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  inset: 0;
 
-    z-index: 5;
+  z-index: 5;
 }
-
-
-/* =========================================================
-   COUPLE LOGO
-========================================================= */
 
 .couple-logo {
-    position: absolute;
+  position: absolute;
 
-    top: 10%;
+  top: 10%;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
-    width: 22%;
+  width: 22%;
 
-    height: auto;
+  height: auto;
 
-    object-fit: contain;
+  object-fit: contain;
 
-    opacity: 1;
+  opacity: 1;
 
-    filter:
-        brightness(1.35)
-        contrast(1.12)
-        drop-shadow(
-            0 3px 8px rgba(0,0,0,.65)
-        );
+  filter:
+    brightness(1.35)
+    contrast(1.12)
+    drop-shadow(
+      0 3px 8px
+      rgba(0,0,0,.65)
+    );
 
-    z-index: 15;
+  z-index: 15;
 }
-
-
-/* =========================================================
-   INTRO
-========================================================= */
 
 .page1-intro {
-    position: absolute;
+  position: absolute;
 
-    top: 20.5%;
+  top: 20.5%;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
-    width: 90%;
+  width: 90%;
 
-    text-align: center;
+  text-align: center;
 
-    color: var(--gold-light);
+  color:
+    var(--gold-light);
 
-    font-size: clamp(17px, 3.5vw, 28px);
+  font-size:
+    clamp(
+      17px,
+      3.5vw,
+      28px
+    );
 
-    font-weight: 400;
+  font-weight: 400;
 
-    line-height: 1.5;
+  line-height: 1.5;
 
-    text-shadow:
-        0 2px 8px rgba(0,0,0,.55);
+  text-shadow:
+    0 2px 8px
+    rgba(0,0,0,.55);
 }
 
-
-/* =========================================================
-   NAMES
-========================================================= */
-
 .page1-names {
-    position: absolute;
+  position: absolute;
 
-    top: 29%;
+  top: 29%;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
-    width: 88%;
+  width: 88%;
 
-    text-align: center;
+  text-align: center;
 
-    color: var(--ivory);
+  color:
+    var(--ivory);
 
-    text-shadow:
-        0 3px 12px rgba(0,0,0,.65);
+  text-shadow:
+    0 3px 12px
+    rgba(0,0,0,.65);
 }
 
 .page1-name {
-    font-family:
-        "Amiri",
-        serif;
+  font-family:
+    "Amiri",
+    serif;
 
-    font-size: clamp(45px, 8.5vw, 74px);
+  font-size:
+    clamp(
+      45px,
+      8.5vw,
+      74px
+    );
 
-    font-weight: 700;
+  font-weight: 700;
 
-    line-height: .95;
+  line-height: .95;
 }
 
 .page1-and {
-    margin: 1.8% 0;
+  margin: 1.8% 0;
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-    font-size: clamp(27px, 4.5vw, 42px);
+  font-size:
+    clamp(
+      27px,
+      4.5vw,
+      42px
+    );
 
-    color: var(--gold-light);
+  color:
+    var(--gold-light);
 
-    direction: ltr;
+  direction: ltr;
 
-    line-height: .9;
+  line-height: .9;
 }
-
-
-/* =========================================================
-   DATE
-========================================================= */
 
 .page1-date {
-    position: absolute;
+  position: absolute;
 
-    top: 56.5%;
+  top: 56.5%;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-    font-size: clamp(23px, 4vw, 37px);
+  font-size:
+    clamp(
+      23px,
+      4vw,
+      37px
+    );
 
-    font-weight: 600;
+  font-weight: 600;
 
-    letter-spacing: 2px;
+  letter-spacing: 2px;
 
-    color: var(--gold-light);
+  color:
+    var(--gold-light);
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    direction: ltr;
+  direction: ltr;
 
-    text-shadow:
-        0 2px 8px rgba(0,0,0,.6);
+  text-shadow:
+    0 2px 8px
+    rgba(0,0,0,.6);
 }
-
-
-/* =========================================================
-   PAGE 1 BUTTON
-========================================================= */
 
 .page1-button {
-    bottom: 10.5%;
+  bottom: 10.5%;
 }
 
 
 /* =========================================================
-   PAGE 2
+   PAGE 2 — MESSAGE
 ========================================================= */
 
 .page2-content {
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  inset: 0;
 
-    z-index: 5;
-}
-
-
-/* =========================================================
-   MESSAGE BOX
-========================================================= */
-
-.message-box {
-    position: absolute;
-
-    top: 11%;
-
-    left: 10%;
-
-    width: 80%;
-
-    height: 71%;
-
-    padding:
-        6.5% 6% 7.5%;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    text-align: center;
-
-    overflow: hidden;
-
-    border:
-        1px solid
-        rgba(228,203,145,.82);
-
-    background:
-        rgba(43,67,49,.13);
-
-    box-shadow:
-        inset 0 0 0 1px
-        rgba(201,164,92,.16);
-
-    z-index: 10;
-}
-
-
-/* Inner border */
-
-.message-box::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 7px;
-
-    border:
-        1px solid
-        rgba(228,203,145,.22);
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   BASMALA
-========================================================= */
-
-.basmala {
-    position: relative;
-
-    z-index: 2;
-
-    width: 100%;
-
-    color: var(--gold-light);
-
-    font-size:
-        clamp(
-            17px,
-            2.8vw,
-            27px
-        );
-
-    font-weight: 700;
-
-    line-height: 1.3;
-
-    margin: 0;
-
-    flex-shrink: 0;
-}
-
-
-/* =========================================================
-   QURAN VERSE
-========================================================= */
-
-.quran-verse {
-    position: relative;
-
-    z-index: 2;
-
-    width: 100%;
-
-    color: var(--gold-light);
-
-    font-family:
-        "Amiri",
-        serif;
-
-    font-size:
-        clamp(
-            12px,
-            1.95vw,
-            18px
-        );
-
-    font-weight: 400;
-
-    line-height: 1.72;
-
-    text-align: center;
-
-    margin: 0;
-
-    flex-shrink: 0;
-
-    text-shadow:
-        0 2px 6px rgba(0,0,0,.6);
-}
-
-
-/* =========================================================
-   MAIN MESSAGE
-========================================================= */
-
-.message-text {
-    position: relative;
-
-    z-index: 2;
-
-    width: 94%;
-
-    color: var(--ivory);
-
-    font-family:
-        "Amiri",
-        serif;
-
-    font-size:
-        clamp(
-            12px,
-            2vw,
-            19px
-        );
-
-    font-weight: 400;
-
-    line-height: 1.85;
-
-    text-align: center;
-
-    margin: 0;
-
-    flex-shrink: 0;
-
-    text-shadow:
-        0 2px 7px rgba(0,0,0,.55);
-}
-
-
-/* =========================================================
-   ENDING
-========================================================= */
-
-.message-ending {
-    position: relative;
-
-    z-index: 2;
-
-    width: 100%;
-
-    margin: 0;
-
-    padding-top: 3%;
-
-    border-top:
-        1px solid
-        rgba(201,164,92,.4);
-
-    color: var(--gold-light);
-
-    font-family:
-        "Amiri",
-        serif;
-
-    font-size:
-        clamp(
-            12px,
-            1.9vw,
-            18px
-        );
-
-    line-height: 1.6;
-
-    text-align: center;
-
-    flex-shrink: 0;
-
-    text-shadow:
-        0 2px 7px rgba(0,0,0,.55);
-}
-
-
-/* =========================================================
-   PAGE 2 BUTTON
-========================================================= */
-
-.page2-button {
-    bottom: 6.5%;
-}
-
-
-/* =========================================================
-   PAGE 3
-========================================================= */
-
-.page3-content {
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 5;
+  z-index: 5;
 }
 
 
 /*
-   الأيقونات موجودة داخل الخلفية.
-   كل معلومة لها منطقة رأسية مستقلة
-   حتى تكون محاذاتها ثابتة مع الأيقونة.
+   الإطار الخارجي
 */
 
-.details-list {
-    position: absolute;
+.message-box {
+  position: absolute;
 
-    top: 18%;
+  top: 11.5%;
 
-    right: 7%;
+  left: 10%;
 
-    width: 57%;
+  width: 80%;
 
-    height: 61%;
+  height: 70%;
 
-    text-align: right;
+  padding:
+    4% 5.5%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(228,203,145,.82);
+
+  background:
+    rgba(10,9,7,.035);
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(201,164,92,.16);
+
+  z-index: 10;
+}
+
+.message-box::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border:
+    1px solid
+    rgba(228,203,145,.22);
+
+  pointer-events: none;
+}
+
+
+/*
+   البسملة
+*/
+
+.basmala {
+  position: relative;
+
+  z-index: 2;
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    clamp(
+      15px,
+      2.35vw,
+      22px
+    );
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  margin-top: 2%;
+
+  margin-bottom: 2%;
+}
+
+
+/*
+   منطقة الكلام فقط
+   — خلفية شفافة وليست على كامل الصفحة
+*/
+
+.message-copy-area {
+  position: relative;
+
+  z-index: 2;
+
+  width: 96%;
+
+  padding:
+    3.5% 3.5% 4%;
+
+  background:
+    rgba(43,67,49,.14);
+
+  border:
+    1px solid
+    rgba(201,164,92,.18);
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(228,203,145,.05);
+
+  backdrop-filter:
+    blur(.5px);
+
+  -webkit-backdrop-filter:
+    blur(.5px);
+}
+
+
+/*
+   الآية
+*/
+
+.quran-verse {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  color:
+    var(--gold-light);
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    clamp(
+      11.5px,
+      1.85vw,
+      17px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  text-align: center;
+
+  margin-bottom: 4%;
+
+  text-shadow:
+    0 2px 6px
+    rgba(0,0,0,.6);
+}
+
+
+/*
+   الرسالة الأساسية
+*/
+
+.message-text {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  color:
+    var(--ivory);
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    clamp(
+      12px,
+      1.9vw,
+      18px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.82;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 7px
+    rgba(0,0,0,.55);
+}
+
+
+/*
+   زر التفاصيل
+*/
+
+.page2-button {
+  bottom: 7%;
 }
 
 
 /* =========================================================
-   INDIVIDUAL DETAIL
+   PAGE 3 — DETAILS
+   لا تغيّري هذه القواعد
 ========================================================= */
+
+.page3-content {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+}
+
+.details-list {
+  position: absolute;
+
+  top: 18%;
+
+  right: 7%;
+
+  width: 57%;
+
+  height: 61%;
+
+  text-align: right;
+}
 
 .detail {
-    position: absolute;
+  position: absolute;
 
-    right: 0;
+  right: 0;
 
-    width: 100%;
+  width: 100%;
 
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    align-items: flex-start;
+  align-items: flex-start;
 
-    justify-content: center;
+  justify-content: center;
 
-    text-align: right;
+  text-align: right;
 }
 
 
-/* =========================================================
-   ALIGNMENT WITH ICONS
-========================================================= */
+/* التاريخ */
 
 .detail:nth-child(1) {
-    top: 0%;
+  top: 0%;
 
-    height: 23%;
+  height: 23%;
+
+  transform:
+    translateY(6%);
 }
+
+
+/* الوقت */
 
 .detail:nth-child(2) {
-    top: 25.5%;
+  top: 25.5%;
 
-    height: 23%;
+  height: 23%;
 }
+
+
+/* القاعة */
 
 .detail:nth-child(3) {
-    top: 51%;
+  top: 51%;
 
-    height: 23%;
+  height: 23%;
+
+  transform:
+    translateY(6%);
 }
+
+
+/* التنويه */
 
 .detail:nth-child(4) {
-    top: 76.5%;
+  top: 76.5%;
 
-    height: 23%;
+  height: 23%;
+
+  transform:
+    translateY(22%);
 }
 
 
-/* =========================================================
-   LABEL
-========================================================= */
+/*
+   نزول تاريخ المناسبة فقط
+*/
+
+.detail:nth-child(1) .detail-value {
+  margin-top: 10%;
+}
+
+
+/*
+   نزول اسم القاعة ومحاذاته بشكل أفضل
+*/
+
+.detail:nth-child(3) .detail-value {
+  margin-top: 16%;
+}
 
 .detail-label {
-    color: var(--gold);
+  color:
+    var(--gold);
 
-    font-family:
-        "Amiri",
-        serif;
+  font-family:
+    "Amiri",
+    serif;
 
-    font-size:
-        clamp(
-            14px,
-            2.4vw,
-            22px
-        );
+  font-size:
+    clamp(
+      14px,
+      2.4vw,
+      22px
+    );
 
-    font-weight: 700;
+  font-weight: 700;
 
-    line-height: 1.2;
+  line-height: 1.2;
 
-    margin-bottom: 1%;
+  margin-bottom: 1%;
 
-    text-shadow:
-        0 2px 7px rgba(0,0,0,.55);
+  text-shadow:
+    0 2px 7px
+    rgba(0,0,0,.55);
 }
-
-
-/* =========================================================
-   VALUE
-========================================================= */
 
 .detail-value {
-    color: var(--ivory);
+  color:
+    var(--ivory);
 
-    font-family:
-        "Amiri",
-        serif;
+  font-family:
+    "Amiri",
+    serif;
 
-    font-size:
-        clamp(
-            16px,
-            2.7vw,
-            25px
-        );
+  font-size:
+    clamp(
+      16px,
+      2.7vw,
+      25px
+    );
 
-    font-weight: 400;
+  font-weight: 400;
 
-    line-height: 1.25;
+  line-height: 1.25;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    text-shadow:
-        0 2px 8px rgba(0,0,0,.65);
+  text-shadow:
+    0 2px 8px
+    rgba(0,0,0,.65);
 }
-
-
-/* =========================================================
-   CHILDREN
-========================================================= */
 
 .detail.children .detail-value {
-    font-size:
-        clamp(
-            14px,
-            2.35vw,
-            22px
-        );
+  font-size:
+    clamp(
+      14px,
+      2.35vw,
+      22px
+    );
 }
 
-
-/* =========================================================
-   PAGE 3 BUTTON
-========================================================= */
-
 .page3-button {
-    bottom: 8.5%;
+  bottom: 8.5%;
 }
 
 
@@ -865,158 +898,150 @@ body {
 ========================================================= */
 
 .page4-content {
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  inset: 0;
 
-    z-index: 5;
+  z-index: 5;
 
-    text-align: center;
+  text-align: center;
 }
-
-
-/* =========================================================
-   SWAN LIGHT
-========================================================= */
 
 .page4-content::before {
-    content: "";
+  content: "";
 
-    position: absolute;
+  position: absolute;
 
-    left: 50%;
+  left: 50%;
 
-    top: 50%;
+  top: 50%;
 
-    transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
-    width: 82%;
+  width: 82%;
 
-    height: 38%;
+  height: 38%;
 
-    background:
-        radial-gradient(
-            ellipse at center,
-            rgba(228,203,145,.16) 0%,
-            rgba(228,203,145,.07) 32%,
-            rgba(228,203,145,0) 72%
-        );
+  background:
+    radial-gradient(
+      ellipse at center,
 
-    pointer-events: none;
+      rgba(228,203,145,.16)
+      0%,
 
-    z-index: 1;
+      rgba(228,203,145,.07)
+      32%,
+
+      rgba(228,203,145,0)
+      72%
+    );
+
+  pointer-events: none;
+
+  z-index: 1;
 }
-
-
-/* =========================================================
-   VENUE
-========================================================= */
 
 .venue {
-    position: absolute;
+  position: absolute;
 
-    top: 28%;
+  top: 28%;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
-    width: 86%;
+  width: 86%;
 
-    text-align: center;
+  text-align: center;
 
-    z-index: 5;
+  z-index: 5;
 }
-
 
 .venue-name {
-    color: var(--ivory);
+  color:
+    var(--ivory);
 
-    font-family:
-        "Amiri",
-        serif;
+  font-family:
+    "Amiri",
+    serif;
 
-    font-size:
-        clamp(
-            37px,
-            6.2vw,
-            58px
-        );
+  font-size:
+    clamp(
+      37px,
+      6.2vw,
+      58px
+    );
 
-    font-weight: 700;
+  font-weight: 700;
 
-    line-height: 1.3;
+  line-height: 1.3;
 
-    text-shadow:
-        0 3px 13px rgba(0,0,0,.7);
+  text-shadow:
+    0 3px 13px
+    rgba(0,0,0,.7);
 }
-
-
-/* =========================================================
-   VENUE MESSAGE
-========================================================= */
 
 .venue-message {
-    position: absolute;
+  position: absolute;
 
-    top: 57%;
+  top: 57%;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
-    width: 72%;
+  width: 72%;
 
-    padding:
-        2.2% 4%;
+  padding:
+    2.2% 4%;
 
-    color: var(--gold-light);
+  color:
+    var(--gold-light);
 
-    font-family:
-        "Amiri",
-        serif;
+  font-family:
+    "Amiri",
+    serif;
 
-    font-size:
-        clamp(
-            16px,
-            2.4vw,
-            23px
-        );
+  font-size:
+    clamp(
+      16px,
+      2.4vw,
+      23px
+    );
 
-    line-height: 1.9;
+  line-height: 1.9;
 
-    text-align: center;
+  text-align: center;
 
-    text-shadow:
-        0 2px 8px rgba(0,0,0,.65);
+  text-shadow:
+    0 2px 8px
+    rgba(0,0,0,.65);
 
-    background:
-        rgba(43,67,49,.14);
+  background:
+    rgba(43,67,49,.14);
 
-    border:
-        1px solid
-        rgba(201,164,92,.50);
+  border:
+    1px solid
+    rgba(201,164,92,.50);
 
-    box-shadow:
-        inset 0 0 0 1px
-        rgba(228,203,145,.08);
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(228,203,145,.08);
 
-    backdrop-filter:
-        blur(.8px);
+  backdrop-filter:
+    blur(.8px);
 
-    -webkit-backdrop-filter:
-        blur(.8px);
+  -webkit-backdrop-filter:
+    blur(.8px);
 
-    z-index: 15;
+  z-index: 15;
 }
 
-
-/* =========================================================
-   MAP BUTTON
-========================================================= */
-
 .maps-button {
-    bottom: 10%;
+  bottom: 10%;
 }
 
 
@@ -1026,268 +1051,231 @@ body {
 
 @media (max-width: 600px) {
 
-    .invitation {
-        width: 100vw;
+  .invitation {
+    width: 100vw;
 
-        height: 177.777777vw;
+    height:
+      177.777777vw;
 
-        max-height: 100vh;
-    }
+    max-height: 100vh;
+  }
 
+  .letters {
+    font-size: 26px;
+  }
 
-    .letters {
-        font-size: 26px;
-    }
+  .made {
+    font-size: 12px;
+  }
 
 
-    .made {
-        font-size: 12px;
-    }
+  /* PAGE 1 */
 
+  .couple-logo {
+    width: 22%;
+    top: 10%;
+  }
 
-    /* =====================================================
-       PAGE 1
-    ===================================================== */
+  .page1-intro {
+    top: 20%;
 
-    .couple-logo {
-        width: 22%;
+    font-size: 18px;
+  }
 
-        top: 10%;
-    }
+  .page1-names {
+    top: 29%;
+  }
 
+  .page1-name {
+    font-size: 49px;
 
-    .page1-intro {
-        top: 20%;
+    line-height: .92;
+  }
 
-        font-size: 18px;
-    }
+  .page1-and {
+    font-size: 29px;
 
+    margin:
+      1.5% 0;
+  }
 
-    .page1-names {
-        top: 29%;
-    }
+  .page1-date {
+    top: 57%;
 
+    font-size: 24px;
+  }
 
-    .page1-name {
-        font-size: 49px;
 
-        line-height: .92;
-    }
+  /* PAGE 2 */
 
+  .message-box {
+    top: 11%;
 
-    .page1-and {
-        font-size: 29px;
+    height: 71%;
 
-        margin: 1.5% 0;
-    }
+    padding:
+      4% 5%;
 
+    justify-content:
+      flex-start;
+  }
 
-    .page1-date {
-        top: 57%;
+  .basmala {
+    font-size: 16px;
 
-        font-size: 24px;
-    }
+    margin-top: 1.5%;
 
+    margin-bottom: 2%;
+  }
 
-    /* =====================================================
-       PAGE 2
-    ===================================================== */
+  .message-copy-area {
+    width: 97%;
 
-    .message-box {
-        top: 11%;
+    padding:
+      3.5% 3% 4%;
+  }
 
-        left: 10%;
+  .quran-verse {
+    font-size: 11.5px;
 
-        width: 80%;
+    line-height: 1.62;
 
-        height: 71%;
+    margin-bottom: 4%;
+  }
 
-        padding:
-            6.5% 5.5% 7.5%;
+  .message-text {
+    font-size: 12px;
 
-        display: flex;
+    line-height: 1.82;
+  }
 
-        flex-direction: column;
+  .page2-button {
+    bottom: 6.5%;
+  }
 
-        align-items: center;
 
-        justify-content: space-between;
+  /* PAGE 3
+     نفس المحاذاة المضبوطة
+  */
 
-        overflow: hidden;
-    }
+  .details-list {
+    top: 18%;
 
+    right: 7%;
 
-    .basmala {
-        width: 100%;
+    width: 57%;
 
-        font-size: 17px;
+    height: 61%;
+  }
 
-        line-height: 1.35;
+  .detail-label {
+    font-size: 15px;
 
-        margin: 0;
-    }
+    margin-bottom: .5%;
+  }
 
+  .detail-value {
+    font-size: 17px;
 
-    .quran-verse {
-        width: 100%;
+    line-height: 1.2;
+  }
 
-        font-size: 12.5px;
+  .detail:nth-child(1) {
+    transform:
+      translateY(7%);
+  }
 
-        line-height: 1.8;
+  .detail:nth-child(3) {
+    transform:
+      translateY(7%);
+  }
 
-        margin: 0;
-    }
+  .detail:nth-child(4) {
+    transform:
+      translateY(22%);
+  }
 
+  .detail.children .detail-value {
+    font-size: 15px;
+  }
 
-    .message-text {
-        width: 94%;
+  .page3-button {
+    bottom: 8.5%;
+  }
 
-        font-size: 12.8px;
 
-        line-height: 1.95;
+  /* PAGE 4 */
 
-        margin: 0;
-    }
+  .venue-name {
+    font-size: 39px;
+  }
 
+  .venue-message {
+    font-size: 16px;
 
-    .message-ending {
-        width: 100%;
+    width: 74%;
 
-        font-size: 12px;
+    padding:
+      2.5% 4%;
 
-        line-height: 1.6;
-
-        margin: 0;
-
-        padding-top: 3%;
-    }
-
-
-    .page2-button {
-        bottom: 6.5%;
-    }
-
-
-    /* =====================================================
-       PAGE 3
-    ===================================================== */
-
-    .details-list {
-        top: 18%;
-
-        right: 7%;
-
-        width: 57%;
-
-        height: 61%;
-    }
-
-
-    .detail-label {
-        font-size: 15px;
-
-        margin-bottom: .5%;
-    }
-
-
-    .detail-value {
-        font-size: 17px;
-
-        line-height: 1.2;
-    }
-
-
-    .detail.children .detail-value {
-        font-size: 15px;
-    }
-
-
-    /* =====================================================
-       PAGE 4
-    ===================================================== */
-
-    .venue-name {
-        font-size: 39px;
-    }
-
-
-    .venue-message {
-        font-size: 16px;
-
-        width: 74%;
-
-        padding:
-            2.5% 4%;
-
-        background:
-            rgba(43,67,49,.11);
-    }
-
+    background:
+      rgba(43,67,49,.11);
+  }
 }
 
 
 /* =========================================================
-   SHORT PHONES
+   SHORT HEIGHT DEVICES
 ========================================================= */
 
 @media (max-height: 700px) {
 
-    .letters {
-        top: 2.8%;
-    }
+  .letters {
+    top: 2.8%;
+  }
 
+  .couple-logo {
+    top: 8.5%;
+  }
 
-    .couple-logo {
-        top: 8.5%;
-    }
+  .page1-intro {
+    top: 18%;
+  }
 
+  .page1-names {
+    top: 27%;
+  }
 
-    .page1-intro {
-        top: 18%;
-    }
+  .page1-date {
+    top: 52%;
+  }
 
+  .message-box {
+    top: 10%;
 
-    .page1-names {
-        top: 27%;
-    }
+    height: 72%;
+  }
 
+  .details-list {
+    top: 17%;
 
-    .page1-date {
-        top: 54%;
-    }
+    height: 62%;
+  }
 
-
-    .message-box {
-        top: 10%;
-
-        height: 72%;
-
-        padding:
-            6% 5.5% 7%;
-    }
-
-
-    .details-list {
-        top: 17%;
-
-        height: 62%;
-    }
-
-
-    .venue {
-        top: 25%;
-    }
-
+  .venue {
+    top: 25%;
+  }
 }
 
 
 /* =========================================================
-   PREVENT SELECTION / DRAG
+   IMAGE BEHAVIOR
 ========================================================= */
 
 img {
-    -webkit-user-drag: none;
-    user-select: none;
+  -webkit-user-drag: none;
+
+  user-select: none;
 }
 
 </style>
@@ -1304,316 +1292,310 @@ img {
 ===================================================== -->
 
 <section
-    class="page page-1 active"
-    id="page1"
+  class="page page-1 active"
+  id="page1"
 >
 
+  <img
+    class="background"
+    src="backgroundw1.png"
+    alt=""
+  >
+
+  <div class="letters">
+    Letters
+  </div>
+
+  <div class="page1-content">
+
     <img
-        class="background"
-        src="backgroundw1.png"
-        alt=""
+      class="couple-logo"
+      src="logos.png"
+      alt="سمر وأحمد"
     >
 
-    <div class="letters">
-        Letters
+    <div class="page1-intro">
+      بكل حب ندعوكم
     </div>
 
+    <div class="page1-names">
 
-    <div class="page1-content">
+      <div class="page1-name">
+        سمر
+      </div>
 
+      <div class="page1-and">
+        &
+      </div>
 
-        <img
-            class="couple-logo"
-            src="logos.png"
-            alt="سمر وأحمد"
-        >
-
-
-        <div class="page1-intro">
-            بكل حب ندعوكم
-        </div>
-
-
-        <div class="page1-names">
-
-            <div class="page1-name">
-                سمر
-            </div>
-
-            <div class="page1-and">
-                &
-            </div>
-
-            <div class="page1-name">
-                أحمد
-            </div>
-
-        </div>
-
-
-        <div class="page1-date">
-            27 August
-        </div>
-
-
-        <button
-            class="button page1-button"
-            type="button"
-            onclick="openInvitation()"
-        >
-            الدعوة
-        </button>
-
+      <div class="page1-name">
+        أحمد
+      </div>
 
     </div>
 
-
-    <div class="made">
-        made by letters
+    <div class="page1-date">
+      27 August
     </div>
+
+    <button
+      class="button page1-button"
+      type="button"
+      onclick="openInvitation()"
+    >
+      الدعوة
+    </button>
+
+  </div>
+
+  <div class="made">
+    made by letters
+  </div>
 
 </section>
 
 
 
 <!-- =====================================================
-     PAGE 2
+     PAGE 2 — MESSAGE
 ===================================================== -->
 
 <section
-    class="page page-2"
-    id="page2"
+  class="page page-2"
+  id="page2"
 >
 
-    <img
-        class="background"
-        src="backgroundw2.png"
-        alt=""
-    >
+  <img
+    class="background"
+    src="backgroundw2.png"
+    alt=""
+  >
 
-    <div class="letters">
-        Letters
-    </div>
+  <div class="letters">
+    Letters
+  </div>
 
+  <div class="page2-content">
 
-    <div class="page2-content">
+    <div class="message-box">
 
-
-        <div class="message-box">
-
-
-            <div class="basmala">
-                بسم الله الرحمن الرحيم
-            </div>
+      <div class="basmala">
+        بسم الله الرحمن الرحيم
+      </div>
 
 
-            <div class="quran-verse">
-                ﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم
-                مِّنْ أَنفُسِكُمْ أَزْوَاجًا
-                لِّتَسْكُنُوا إِلَيْهَا
-                وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
-                إِنَّ فِي ذَٰلِكَ لَآيَاتٍ
-                لِّقَوْمٍ يَتَفَكَّرُونَ﴾
-            </div>
+      <div class="message-copy-area">
 
-
-            <div class="message-text">
-                الأهل والأحبة والأصدقاء الكرام،
-                <br>
-                يغمرنا الفرح والسرور، ويحلو اللقاء بوجود من نحب.
-                <br>
-                يسرنا أن نشارككم لحظات العمر السعيدة،
-                <br>
-                ونتشرف بدعوتكم لحضور حفل زفافنا المبارك.
-            </div>
-
-
-            <div class="message-ending">
-                وبحضوركم تكتمل فرحتنا ويتسق سرورنا.
-            </div>
-
-
+        <div class="quran-verse">
+          ﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم
+          مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+          لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ
+          بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+          إِنَّ فِي ذَٰلِكَ لَآيَاتٍ
+          لِّقَوْمٍ يَتَفَكَّرُونَ﴾
         </div>
 
 
-        <button
-            class="button page2-button"
-            type="button"
-            onclick="goToPage(2)"
-        >
-            التفاصيل
-        </button>
+        <div class="message-text">
 
+          الأهل والأحبة والأصدقاء الكرام،
+          <br>
+
+          يغمرنا الفرح والسرور،
+          ويحلو اللقاء بوجود من نحب.
+          <br>
+
+          يسرنا أن نشارككم لحظات العمر السعيدة،
+          <br>
+
+          ونتشرف بدعوتكم لحضور حفل زفافنا المبارك.
+
+        </div>
+
+      </div>
 
     </div>
 
 
-    <div class="made">
-        made by letters
-    </div>
+    <button
+      class="button page2-button"
+      type="button"
+      onclick="goToPage(2)"
+    >
+      التفاصيل
+    </button>
+
+  </div>
+
+  <div class="made">
+    made by letters
+  </div>
 
 </section>
 
 
 
 <!-- =====================================================
-     PAGE 3
+     PAGE 3 — DETAILS
 ===================================================== -->
 
 <section
-    class="page page-3"
-    id="page3"
+  class="page page-3"
+  id="page3"
 >
 
-    <img
-        class="background"
-        src="backgroundw3.png"
-        alt=""
-    >
+  <img
+    class="background"
+    src="backgroundw3.png"
+    alt=""
+  >
 
-    <div class="letters">
-        Letters
-    </div>
+  <div class="letters">
+    Letters
+  </div>
 
+  <div class="page3-content">
 
-    <div class="page3-content">
-
-
-        <div class="details-list">
+    <div class="details-list">
 
 
-            <div class="detail">
+      <!-- التاريخ -->
 
-                <div class="detail-label">
-                    التاريخ
-                </div>
+      <div class="detail">
 
-                <div class="detail-value">
-                    27 أغسطس 2026
-                </div>
-
-            </div>
-
-
-            <div class="detail">
-
-                <div class="detail-label">
-                    الوقت
-                </div>
-
-                <div class="detail-value">
-                    9:00 مساءً
-                </div>
-
-            </div>
-
-
-            <div class="detail">
-
-                <div class="detail-label">
-                    القاعة
-                </div>
-
-                <div class="detail-value">
-                    قاعة ليلتي
-                </div>
-
-            </div>
-
-
-            <div class="detail children">
-
-                <div class="detail-label">
-                    تنويه
-                </div>
-
-                <div class="detail-value">
-                    جنة الأطفال منازلهم
-                </div>
-
-            </div>
-
-
+        <div class="detail-label">
+          التاريخ
         </div>
 
+        <div class="detail-value">
+          27 أغسطس 2026
+        </div>
 
-        <a
-            class="button page3-button"
-            href="#"
-            onclick="goToPage(3); return false;"
-        >
-            الموقع
-        </a>
+      </div>
+
+
+      <!-- الوقت -->
+
+      <div class="detail">
+
+        <div class="detail-label">
+          الوقت
+        </div>
+
+        <div class="detail-value">
+          9:00 مساءً
+        </div>
+
+      </div>
+
+
+      <!-- القاعة -->
+
+      <div class="detail">
+
+        <div class="detail-label">
+          القاعة
+        </div>
+
+        <div class="detail-value">
+          قاعة ليلتي
+        </div>
+
+      </div>
+
+
+      <!-- التنويه -->
+
+      <div class="detail children">
+
+        <div class="detail-label">
+          تنويه
+        </div>
+
+        <div class="detail-value">
+          جنة الأطفال منازلهم
+        </div>
+
+      </div>
 
 
     </div>
 
 
-    <div class="made">
-        made by letters
-    </div>
+    <a
+      class="button page3-button"
+      href="#"
+      onclick="
+        goToPage(3);
+        return false;
+      "
+    >
+      الموقع
+    </a>
+
+  </div>
+
+  <div class="made">
+    made by letters
+  </div>
 
 </section>
 
 
 
 <!-- =====================================================
-     PAGE 4
+     PAGE 4 — LOCATION
 ===================================================== -->
 
 <section
-    class="page page-4"
-    id="page4"
+  class="page page-4"
+  id="page4"
 >
 
-    <img
-        class="background"
-        src="backgroundw4.png"
-        alt=""
+  <img
+    class="background"
+    src="backgroundw4.png"
+    alt=""
+  >
+
+  <div class="letters">
+    Letters
+  </div>
+
+  <div class="page4-content">
+
+    <div class="venue">
+
+      <div class="venue-name">
+        قاعة ليلتي
+      </div>
+
+    </div>
+
+
+    <div class="venue-message">
+
+      حضوركم يكمل فرحتنا
+      <br>
+      وننتظركم بكل حب
+
+    </div>
+
+
+    <a
+      class="button maps-button"
+      href="https://www.google.com/maps/search/?api=1&query=قاعة+ليلتي"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      خريطة قوقل
+    </a>
 
-    <div class="letters">
-        Letters
-    </div>
+  </div>
 
-
-    <div class="page4-content">
-
-
-        <div class="venue">
-
-            <div class="venue-name">
-                قاعة ليلتي
-            </div>
-
-        </div>
-
-
-        <div class="venue-message">
-
-            حضوركم يكمل فرحتنا
-            <br>
-            وننتظركم بكل حب
-
-        </div>
-
-
-        <a
-            class="button maps-button"
-            href="https://www.google.com/maps/search/?api=1&query=قاعة+ليلتي"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            خريطة قوقل
-        </a>
-
-
-    </div>
-
-
-    <div class="made">
-        made by letters
-    </div>
+  <div class="made">
+    made by letters
+  </div>
 
 </section>
 
@@ -1621,231 +1603,221 @@ img {
 </div>
 
 
-
 <!-- =====================================================
      MUSIC
 ===================================================== -->
 
 <audio
-    id="weddingMusic"
-    src="music.w.mp3"
-    preload="auto"
-    loop
+  id="weddingMusic"
+  src="music.w.mp3"
+  preload="auto"
+  loop
 ></audio>
 
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-/* =========================================================
-   PAGE SYSTEM
-========================================================= */
-
 const pages =
-    document.querySelectorAll(".page");
+  document.querySelectorAll(".page");
 
 let currentPage = 0;
 
 let changing = false;
 
 
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
+
 function goToPage(index) {
 
-    if (
-        index < 0 ||
-        index >= pages.length
-    ) {
-        return;
-    }
+  if (
+    index < 0 ||
+    index >= pages.length
+  ) {
+    return;
+  }
 
-    if (
-        index === currentPage ||
-        changing
-    ) {
-        return;
-    }
+  if (
+    index === currentPage ||
+    changing
+  ) {
+    return;
+  }
 
-    changing = true;
+  changing = true;
 
+  pages[currentPage]
+    .classList
+    .remove("active");
 
-    pages[currentPage]
-        .classList
-        .remove("active");
+  currentPage = index;
 
+  pages[currentPage]
+    .classList
+    .add("active");
 
-    currentPage = index;
-
-
-    pages[currentPage]
-        .classList
-        .add("active");
-
-
-    setTimeout(
-        function() {
-            changing = false;
-        },
-        600
-    );
-
+  setTimeout(
+    () => {
+      changing = false;
+    },
+    600
+  );
 }
 
 
-/* =========================================================
-   MUSIC
-========================================================= */
+/* =====================================================
+   OPEN INVITATION + MUSIC
+===================================================== */
 
 const music =
-    document.getElementById(
-        "weddingMusic"
-    );
-
+  document.getElementById(
+    "weddingMusic"
+  );
 
 function openInvitation() {
 
-    music.volume = 0.45;
+  music.volume = 0.45;
 
-    music.play().catch(
-        function() {}
-    );
+  music
+    .play()
+    .catch(() => {});
 
-    goToPage(1);
+  goToPage(1);
 }
 
 
-/* =========================================================
+/* =====================================================
    SWIPE
-========================================================= */
+===================================================== */
 
 let startX = 0;
 let startY = 0;
 
-
 const invitation =
-    document.querySelector(
-        ".invitation"
-    );
+  document.querySelector(
+    ".invitation"
+  );
 
 
 invitation.addEventListener(
-    "touchstart",
-    function(event) {
+  "touchstart",
+  (e) => {
 
-        startX =
-            event.changedTouches[0]
-                .screenX;
+    startX =
+      e.changedTouches[0].screenX;
 
-        startY =
-            event.changedTouches[0]
-                .screenY;
+    startY =
+      e.changedTouches[0].screenY;
 
-    },
-    {
-        passive: true
-    }
+  },
+  {
+    passive: true
+  }
 );
 
 
 invitation.addEventListener(
-    "touchend",
-    function(event) {
+  "touchend",
+  (e) => {
 
-        const endX =
-            event.changedTouches[0]
-                .screenX;
+    const endX =
+      e.changedTouches[0].screenX;
 
-        const endY =
-            event.changedTouches[0]
-                .screenY;
+    const endY =
+      e.changedTouches[0].screenY;
 
+    const diffX =
+      endX - startX;
 
-        const diffX =
-            endX - startX;
-
-        const diffY =
-            endY - startY;
+    const diffY =
+      endY - startY;
 
 
-        if (
-            Math.abs(diffX) > 55 &&
-            Math.abs(diffX) > Math.abs(diffY)
-        ) {
+    if (
+      Math.abs(diffX) > 55 &&
+      Math.abs(diffX) >
+        Math.abs(diffY)
+    ) {
 
-            if (diffX < 0) {
+      if (diffX < 0) {
 
-                goToPage(
-                    currentPage + 1
-                );
+        goToPage(
+          currentPage + 1
+        );
 
-            }
-            else {
+      } else {
 
-                goToPage(
-                    currentPage - 1
-                );
+        goToPage(
+          currentPage - 1
+        );
 
-            }
+      }
 
-        }
-
-    },
-    {
-        passive: true
     }
+
+  },
+  {
+    passive: true
+  }
 );
 
 
-/* =========================================================
+/* =====================================================
    KEYBOARD
-========================================================= */
+===================================================== */
 
 document.addEventListener(
-    "keydown",
-    function(event) {
+  "keydown",
+  (e) => {
 
-        if (
-            event.key === "ArrowLeft"
-        ) {
+    if (
+      e.key === "ArrowLeft"
+    ) {
 
-            goToPage(
-                currentPage + 1
-            );
-
-        }
-
-
-        if (
-            event.key === "ArrowRight"
-        ) {
-
-            goToPage(
-                currentPage - 1
-            );
-
-        }
+      goToPage(
+        currentPage + 1
+      );
 
     }
+
+    if (
+      e.key === "ArrowRight"
+    ) {
+
+      goToPage(
+        currentPage - 1
+      );
+
+    }
+
+  }
 );
 
 
-/* =========================================================
-   PREVENT DRAG
-========================================================= */
+/* =====================================================
+   PREVENT IMAGE DRAG
+===================================================== */
 
 document
-    .querySelectorAll("img")
-    .forEach(
-        function(image) {
+  .querySelectorAll("img")
+  .forEach(
+    (img) => {
 
-            image.addEventListener(
-                "dragstart",
-                function(event) {
-                    event.preventDefault();
-                }
-            );
-
+      img.addEventListener(
+        "dragstart",
+        (e) => {
+          e.preventDefault();
         }
-    );
+      );
+
+    }
+  );
 
 </script>
 
