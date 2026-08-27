@@ -473,6 +473,7 @@ body {
 
 /* =========================================================
    MESSAGE BOX
+   الصفحة الثانية فقط
 ========================================================= */
 
 .message-box {
@@ -486,7 +487,8 @@ body {
 
     height: 70%;
 
-    padding: 5% 6%;
+    padding:
+        7% 6% 6%;
 
     display: flex;
 
@@ -494,7 +496,7 @@ body {
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: flex-start;
 
     text-align: center;
 
@@ -535,52 +537,6 @@ body {
 
 
 /* =========================================================
-   MESSAGE DIVIDERS
-========================================================= */
-
-.message-divider {
-    position: relative;
-
-    z-index: 2;
-
-    width: 72%;
-
-    height: 1px;
-
-    background:
-        linear-gradient(
-            to right,
-            transparent,
-            rgba(201,164,92,.65),
-            transparent
-        );
-
-    flex-shrink: 0;
-}
-
-.message-divider::after {
-    content: "";
-
-    position: absolute;
-
-    width: 7px;
-    height: 7px;
-
-    left: 50%;
-    top: 50%;
-
-    transform:
-        translate(-50%, -50%)
-        rotate(45deg);
-
-    background: var(--gold);
-
-    box-shadow:
-        0 0 5px rgba(201,164,92,.35);
-}
-
-
-/* =========================================================
    BASMALA
 ========================================================= */
 
@@ -604,9 +560,7 @@ body {
 
     line-height: 1.25;
 
-    margin: 0;
-
-    flex-shrink: 0;
+    margin-bottom: 4.5%;
 }
 
 
@@ -640,12 +594,56 @@ body {
 
     text-align: center;
 
-    margin: 0;
+    margin-bottom: 5%;
 
     text-shadow:
         0 2px 6px rgba(0,0,0,.6);
+}
+
+
+/* =========================================================
+   FIRST GOLD DIVIDER
+========================================================= */
+
+.message-divider {
+    position: relative;
+
+    width: 82%;
+
+    height: 1px;
+
+    background:
+        rgba(201,164,92,.58);
+
+    margin-bottom: 5%;
 
     flex-shrink: 0;
+
+    z-index: 3;
+}
+
+
+/* Diamond in divider */
+
+.message-divider::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 7px;
+
+    height: 7px;
+
+    background:
+        var(--gold);
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
 }
 
 
@@ -675,11 +673,9 @@ body {
 
     font-weight: 400;
 
-    line-height: 1.85;
+    line-height: 1.9;
 
     text-align: center;
-
-    margin: 0;
 
     text-shadow:
         0 2px 7px rgba(0,0,0,.55);
@@ -689,11 +685,59 @@ body {
 
 
 /* =========================================================
+   SECOND GOLD DIVIDER
+========================================================= */
+
+.message-ending-divider {
+    position: relative;
+
+    width: 82%;
+
+    height: 1px;
+
+    background:
+        rgba(201,164,92,.58);
+
+    margin-top: 4.5%;
+
+    margin-bottom: 4%;
+
+    flex-shrink: 0;
+
+    z-index: 3;
+}
+
+
+.message-ending-divider::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 7px;
+
+    height: 7px;
+
+    background:
+        var(--gold);
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+}
+
+
+/* =========================================================
    ENDING
 ========================================================= */
 
 .message-ending {
     position: relative;
+
+    display: block;
 
     z-index: 2;
 
@@ -707,9 +751,9 @@ body {
 
     font-size:
         clamp(
-            11px,
-            1.8vw,
-            17px
+            12px,
+            1.95vw,
+            18px
         );
 
     font-weight: 400;
@@ -718,9 +762,7 @@ body {
 
     text-align: center;
 
-    margin: 0;
-
-    padding: 0;
+    white-space: nowrap;
 
     text-shadow:
         0 2px 7px rgba(0,0,0,.55);
@@ -740,6 +782,7 @@ body {
 
 /* =========================================================
    PAGE 3
+   لم يتم تغييرها
 ========================================================= */
 
 .page3-content {
@@ -794,11 +837,6 @@ body {
     transform: translateY(-50%);
 }
 
-
-/* =========================================================
-   DETAIL POSITIONS
-   لا تغيير
-========================================================= */
 
 .detail:nth-child(1) {
     top: 25%;
@@ -1089,7 +1127,6 @@ body {
 
     /* =====================================================
        PAGE 1
-       لا تغيير
     ===================================================== */
 
     .couple-logo {
@@ -1134,88 +1171,70 @@ body {
 
     /* =====================================================
        PAGE 2 — MOBILE
-       التعديل هنا فقط
+       ترتيب الصورة المرجعية
     ===================================================== */
 
     .message-box {
-
         top: 11%;
 
         height: 71%;
 
         padding:
-            6.5% 6%;
+            7.5% 5.5% 5%;
 
-        /*
-           نوزع العناصر داخل الإطار
-           بحيث الفراغ فوق = قريب من الفراغ تحت
-        */
-
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
 
     .basmala {
-
         font-size: 17px;
 
         line-height: 1.35;
 
-        margin: 0;
-
-        flex-shrink: 0;
+        margin-bottom: 4.5%;
     }
 
 
     .quran-verse {
-
         font-size: 12.5px;
 
         line-height: 1.9;
 
-        margin: 0;
-
-        flex-shrink: 0;
+        margin-bottom: 5%;
     }
 
 
     .message-divider {
+        width: 82%;
 
-        width: 76%;
-
-        flex-shrink: 0;
-
-        margin: 0;
+        margin-bottom: 5%;
     }
 
 
     .message-text {
+        width: 96%;
 
         font-size: 12.8px;
 
-        line-height: 2;
+        line-height: 2.05;
+    }
 
-        width: 94%;
 
-        margin: 0;
+    .message-ending-divider {
+        width: 82%;
 
-        flex-shrink: 0;
+        margin-top: 4.5%;
+
+        margin-bottom: 3.5%;
     }
 
 
     .message-ending {
+        font-size: 12.5px;
 
-        font-size: 12px;
+        line-height: 1.65;
 
-        line-height: 1.7;
-
-        width: 94%;
-
-        margin: 0;
-
-        padding: 0;
-
-        flex-shrink: 0;
+        white-space: nowrap;
     }
 
 
@@ -1225,8 +1244,7 @@ body {
 
 
     /* =====================================================
-       PAGE 3 — MOBILE
-       لا تغيير
+       PAGE 3 — لم يتم تغييرها
     ===================================================== */
 
     .details-list {
@@ -1295,7 +1313,6 @@ body {
 
     /* =====================================================
        PAGE 4
-       لا تغيير
     ===================================================== */
 
     .venue-name {
@@ -1349,53 +1366,53 @@ body {
     }
 
 
-    /* =====================================================
-       PAGE 2
-    ===================================================== */
+    /* PAGE 2 */
 
     .message-box {
-
         top: 10%;
 
         height: 72%;
 
         padding:
-            6% 6%;
-
-        justify-content: space-between;
+            6% 5.5% 5%;
     }
 
 
     .basmala {
-        margin: 0;
+        margin-bottom: 3%;
     }
 
 
     .quran-verse {
         line-height: 1.8;
 
-        margin: 0;
+        margin-bottom: 4%;
+    }
+
+
+    .message-divider {
+        margin-bottom: 4%;
     }
 
 
     .message-text {
         line-height: 1.9;
+    }
 
-        margin: 0;
+
+    .message-ending-divider {
+        margin-top: 4%;
+
+        margin-bottom: 3%;
     }
 
 
     .message-ending {
-        line-height: 1.6;
-
-        margin: 0;
+        font-size: 12px;
     }
 
 
-    /* =====================================================
-       PAGE 3
-       لا تغيير
-    ===================================================== */
+    /* PAGE 3 */
 
     .detail:nth-child(1) {
         top: 24%;
@@ -1560,6 +1577,8 @@ img {
             </div>
 
 
+            <!-- الفاصل الأول -->
+
             <div class="message-divider"></div>
 
 
@@ -1574,7 +1593,9 @@ img {
             </div>
 
 
-            <div class="message-divider"></div>
+            <!-- الفاصل الثاني -->
+
+            <div class="message-ending-divider"></div>
 
 
             <div class="message-ending">
