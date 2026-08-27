@@ -473,7 +473,6 @@ body {
 
 /* =========================================================
    MESSAGE BOX
-   الصفحة الثانية فقط
 ========================================================= */
 
 .message-box {
@@ -488,7 +487,7 @@ body {
     height: 70%;
 
     padding:
-        7% 6% 6%;
+        7% 5.5% 5%;
 
     display: flex;
 
@@ -561,6 +560,8 @@ body {
     line-height: 1.25;
 
     margin-bottom: 4.5%;
+
+    flex-shrink: 0;
 }
 
 
@@ -598,6 +599,8 @@ body {
 
     text-shadow:
         0 2px 6px rgba(0,0,0,.6);
+
+    flex-shrink: 0;
 }
 
 
@@ -621,9 +624,6 @@ body {
 
     z-index: 3;
 }
-
-
-/* Diamond in divider */
 
 .message-divider::after {
     content: "";
@@ -649,6 +649,7 @@ body {
 
 /* =========================================================
    MAIN MESSAGE
+   المسافات هنا مطابقة لفكرة الصورة
 ========================================================= */
 
 .message-text {
@@ -656,7 +657,7 @@ body {
 
     z-index: 2;
 
-    width: 100%;
+    width: 96%;
 
     color: var(--ivory);
 
@@ -673,7 +674,7 @@ body {
 
     font-weight: 400;
 
-    line-height: 1.9;
+    line-height: 1.45;
 
     text-align: center;
 
@@ -681,6 +682,24 @@ body {
         0 2px 7px rgba(0,0,0,.55);
 
     flex-shrink: 0;
+}
+
+
+/* كل فقرة مستقلة */
+
+.message-text p {
+    margin: 0 0 4.8% 0;
+
+    padding: 0;
+
+    line-height: 1.45;
+}
+
+
+/* آخر فقرة بدون margin إضافي */
+
+.message-text p:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -700,13 +719,12 @@ body {
 
     margin-top: 4.5%;
 
-    margin-bottom: 4%;
+    margin-bottom: 3.8%;
 
     flex-shrink: 0;
 
     z-index: 3;
 }
-
 
 .message-ending-divider::after {
     content: "";
@@ -782,7 +800,7 @@ body {
 
 /* =========================================================
    PAGE 3
-   لم يتم تغييرها
+   نفس الكود الأساسي بدون تعديل
 ========================================================= */
 
 .page3-content {
@@ -1171,7 +1189,6 @@ body {
 
     /* =====================================================
        PAGE 2 — MOBILE
-       ترتيب الصورة المرجعية
     ===================================================== */
 
     .message-box {
@@ -1211,21 +1228,35 @@ body {
     }
 
 
+    /* =====================================================
+       المسافات مثل الصورة
+    ===================================================== */
+
     .message-text {
         width: 96%;
 
         font-size: 12.8px;
 
-        line-height: 2.05;
+        line-height: 1.45;
+    }
+
+
+    .message-text p {
+        margin-bottom: 5%;
+    }
+
+
+    .message-text p:last-child {
+        margin-bottom: 0;
     }
 
 
     .message-ending-divider {
         width: 82%;
 
-        margin-top: 4.5%;
+        margin-top: 4.8%;
 
-        margin-bottom: 3.5%;
+        margin-bottom: 3.8%;
     }
 
 
@@ -1396,7 +1427,17 @@ body {
 
 
     .message-text {
-        line-height: 1.9;
+        line-height: 1.45;
+    }
+
+
+    .message-text p {
+        margin-bottom: 4.8%;
+    }
+
+
+    .message-text p:last-child {
+        margin-bottom: 0;
     }
 
 
@@ -1577,23 +1618,29 @@ img {
             </div>
 
 
-            <!-- الفاصل الأول -->
-
             <div class="message-divider"></div>
 
 
             <div class="message-text">
-                الأهل والأحبة والأصدقاء الكرام،
-                <br>
-                يغمرنا الفرح والسرور، ويحلو اللقاء بوجود من نحب.
-                <br>
-                يسرنا أن نشارككم لحظات العمر السعيدة،
-                <br>
-                ونتشرف بدعوتكم لحضور حفل زفافنا المبارك.
+
+                <p>
+                    الأهل والأحبة والأصدقاء الكرام،
+                </p>
+
+                <p>
+                    يغمرنا الفرح والسرور، ويحلو اللقاء بوجود من نحب.
+                </p>
+
+                <p>
+                    يسرنا أن نشارككم لحظات العمر السعيدة،
+                </p>
+
+                <p>
+                    ونتشرف بدعوتكم لحضور حفل زفافنا المبارك.
+                </p>
+
             </div>
 
-
-            <!-- الفاصل الثاني -->
 
             <div class="message-ending-divider"></div>
 
