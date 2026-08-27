@@ -478,15 +478,16 @@ body {
 .message-box {
     position: absolute;
 
-    top: 11.5%;
+    top: 11%;
 
     left: 10%;
 
     width: 80%;
 
-    height: 70%;
+    height: 71%;
 
-    padding: 5% 6%;
+    padding:
+        6.5% 6% 7.5%;
 
     display: flex;
 
@@ -494,7 +495,7 @@ body {
 
     align-items: center;
 
-    justify-content: center;
+    justify-content: space-between;
 
     text-align: center;
 
@@ -554,9 +555,11 @@ body {
 
     font-weight: 700;
 
-    line-height: 1.25;
+    line-height: 1.3;
 
-    margin-bottom: 3%;
+    margin: 0;
+
+    flex-shrink: 0;
 }
 
 
@@ -586,11 +589,13 @@ body {
 
     font-weight: 400;
 
-    line-height: 1.75;
+    line-height: 1.72;
 
     text-align: center;
 
-    margin-bottom: 4%;
+    margin: 0;
+
+    flex-shrink: 0;
 
     text-shadow:
         0 2px 6px rgba(0,0,0,.6);
@@ -606,7 +611,7 @@ body {
 
     z-index: 2;
 
-    width: 100%;
+    width: 94%;
 
     color: var(--ivory);
 
@@ -627,6 +632,10 @@ body {
 
     text-align: center;
 
+    margin: 0;
+
+    flex-shrink: 0;
+
     text-shadow:
         0 2px 7px rgba(0,0,0,.55);
 }
@@ -637,7 +646,41 @@ body {
 ========================================================= */
 
 .message-ending {
-    display: none;
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding-top: 3%;
+
+    border-top:
+        1px solid
+        rgba(201,164,92,.4);
+
+    color: var(--gold-light);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(
+            12px,
+            1.9vw,
+            18px
+        );
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    flex-shrink: 0;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,.55);
 }
 
 
@@ -646,7 +689,7 @@ body {
 ========================================================= */
 
 .page2-button {
-    bottom: 7%;
+    bottom: 6.5%;
 }
 
 
@@ -663,18 +706,22 @@ body {
 }
 
 
-/* =========================================================
-   DETAILS
-========================================================= */
+/*
+   الأيقونات موجودة داخل الخلفية.
+   كل معلومة لها منطقة رأسية مستقلة
+   حتى تكون محاذاتها ثابتة مع الأيقونة.
+*/
 
 .details-list {
     position: absolute;
 
-    inset: 0;
+    top: 18%;
 
-    width: 100%;
+    right: 7%;
 
-    height: 100%;
+    width: 57%;
+
+    height: 61%;
 
     text-align: right;
 }
@@ -687,11 +734,9 @@ body {
 .detail {
     position: absolute;
 
-    right: 7%;
+    right: 0;
 
-    width: 57%;
-
-    height: auto;
+    width: 100%;
 
     display: flex;
 
@@ -702,29 +747,35 @@ body {
     justify-content: center;
 
     text-align: right;
-
-    transform: translateY(-50%);
 }
 
 
 /* =========================================================
-   POSITIONS
+   ALIGNMENT WITH ICONS
 ========================================================= */
 
 .detail:nth-child(1) {
-    top: 25%;
+    top: 0%;
+
+    height: 23%;
 }
 
 .detail:nth-child(2) {
-    top: 44%;
+    top: 25.5%;
+
+    height: 23%;
 }
 
 .detail:nth-child(3) {
-    top: 63%;
+    top: 51%;
+
+    height: 23%;
 }
 
 .detail:nth-child(4) {
-    top: 82%;
+    top: 76.5%;
+
+    height: 23%;
 }
 
 
@@ -750,7 +801,7 @@ body {
 
     line-height: 1.2;
 
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 
     text-shadow:
         0 2px 7px rgba(0,0,0,.55);
@@ -789,10 +840,6 @@ body {
 /* =========================================================
    CHILDREN
 ========================================================= */
-
-.detail.children {
-    right: 7%;
-}
 
 .detail.children .detail-value {
     font-size:
@@ -1043,15 +1090,20 @@ body {
 
 
     /* =====================================================
-       PAGE 2 — MOBILE
+       PAGE 2
     ===================================================== */
 
     .message-box {
         top: 11%;
 
+        left: 10%;
+
+        width: 80%;
+
         height: 71%;
 
-        padding: 8% 6%;
+        padding:
+            6.5% 5.5% 7.5%;
 
         display: flex;
 
@@ -1059,9 +1111,7 @@ body {
 
         align-items: center;
 
-        justify-content: flex-start;
-
-        text-align: center;
+        justify-content: space-between;
 
         overflow: hidden;
     }
@@ -1074,7 +1124,7 @@ body {
 
         line-height: 1.35;
 
-        margin-bottom: 5%;
+        margin: 0;
     }
 
 
@@ -1083,9 +1133,9 @@ body {
 
         font-size: 12.5px;
 
-        line-height: 1.9;
+        line-height: 1.8;
 
-        margin-bottom: 7%;
+        margin: 0;
     }
 
 
@@ -1094,7 +1144,22 @@ body {
 
         font-size: 12.8px;
 
-        line-height: 2.05;
+        line-height: 1.95;
+
+        margin: 0;
+    }
+
+
+    .message-ending {
+        width: 100%;
+
+        font-size: 12px;
+
+        line-height: 1.6;
+
+        margin: 0;
+
+        padding-top: 3%;
     }
 
 
@@ -1104,86 +1169,36 @@ body {
 
 
     /* =====================================================
-       PAGE 3 — MOBILE
+       PAGE 3
     ===================================================== */
 
     .details-list {
-        position: absolute;
+        top: 18%;
 
-        inset: 0;
-
-        width: 100%;
-
-        height: 100%;
-    }
-
-
-    .detail {
         right: 7%;
 
         width: 57%;
 
-        height: auto;
-
-        transform: translateY(-50%);
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        justify-content: center;
-
-        text-align: right;
-    }
-
-
-    .detail:nth-child(1) {
-        top: 25%;
-    }
-
-
-    .detail:nth-child(2) {
-        top: 44%;
-    }
-
-
-    .detail:nth-child(3) {
-        top: 63%;
-    }
-
-
-    .detail:nth-child(4) {
-        top: 82%;
+        height: 61%;
     }
 
 
     .detail-label {
         font-size: 15px;
 
-        line-height: 1.2;
-
-        margin-bottom: 2%;
+        margin-bottom: .5%;
     }
 
 
     .detail-value {
         font-size: 17px;
 
-        line-height: 1.25;
-    }
-
-
-    .detail.children {
-        right: 7%;
+        line-height: 1.2;
     }
 
 
     .detail.children .detail-value {
         font-size: 15px;
-
-        line-height: 1.25;
     }
 
 
@@ -1242,59 +1257,20 @@ body {
     }
 
 
-    /* =====================================================
-       PAGE 2
-    ===================================================== */
-
     .message-box {
         top: 10%;
 
         height: 72%;
 
-        padding: 7% 6%;
-
-        justify-content: flex-start;
+        padding:
+            6% 5.5% 7%;
     }
 
 
-    .basmala {
-        margin-bottom: 4%;
-    }
+    .details-list {
+        top: 17%;
 
-
-    .quran-verse {
-        line-height: 1.85;
-
-        margin-bottom: 6%;
-    }
-
-
-    .message-text {
-        line-height: 1.95;
-    }
-
-
-    /* =====================================================
-       PAGE 3
-    ===================================================== */
-
-    .detail:nth-child(1) {
-        top: 24%;
-    }
-
-
-    .detail:nth-child(2) {
-        top: 43%;
-    }
-
-
-    .detail:nth-child(3) {
-        top: 62%;
-    }
-
-
-    .detail:nth-child(4) {
-        top: 81%;
+        height: 62%;
     }
 
 
@@ -1449,6 +1425,11 @@ img {
                 يسرنا أن نشارككم لحظات العمر السعيدة،
                 <br>
                 ونتشرف بدعوتكم لحضور حفل زفافنا المبارك.
+            </div>
+
+
+            <div class="message-ending">
+                وبحضوركم تكتمل فرحتنا ويتسق سرورنا.
             </div>
 
 
