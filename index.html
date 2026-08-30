@@ -486,8 +486,7 @@ body {
 
     height: 70%;
 
-    padding:
-        7% 5.5% 5%;
+    padding: 5% 6%;
 
     display: flex;
 
@@ -495,7 +494,7 @@ body {
 
     align-items: center;
 
-    justify-content: flex-start;
+    justify-content: center;
 
     text-align: center;
 
@@ -516,9 +515,7 @@ body {
 }
 
 
-/* =========================================================
-   INNER BORDER
-========================================================= */
+/* Inner border */
 
 .message-box::after {
     content: "";
@@ -559,9 +556,7 @@ body {
 
     line-height: 1.25;
 
-    margin-bottom: 4.5%;
-
-    flex-shrink: 0;
+    margin-bottom: 3%;
 }
 
 
@@ -595,61 +590,15 @@ body {
 
     text-align: center;
 
-    margin-bottom: 5%;
+    margin-bottom: 4%;
 
     text-shadow:
         0 2px 6px rgba(0,0,0,.6);
-
-    flex-shrink: 0;
-}
-
-
-/* =========================================================
-   FIRST GOLD DIVIDER
-========================================================= */
-
-.message-divider {
-    position: relative;
-
-    width: 82%;
-
-    height: 1px;
-
-    background:
-        rgba(201,164,92,.58);
-
-    margin-bottom: 5%;
-
-    flex-shrink: 0;
-
-    z-index: 3;
-}
-
-.message-divider::after {
-    content: "";
-
-    position: absolute;
-
-    left: 50%;
-
-    top: 50%;
-
-    width: 7px;
-
-    height: 7px;
-
-    background:
-        var(--gold);
-
-    transform:
-        translate(-50%, -50%)
-        rotate(45deg);
 }
 
 
 /* =========================================================
    MAIN MESSAGE
-   المسافات هنا مطابقة لفكرة الصورة
 ========================================================= */
 
 .message-text {
@@ -657,7 +606,7 @@ body {
 
     z-index: 2;
 
-    width: 96%;
+    width: 100%;
 
     color: var(--ivory);
 
@@ -674,77 +623,12 @@ body {
 
     font-weight: 400;
 
-    line-height: 1.45;
+    line-height: 1.85;
 
     text-align: center;
 
     text-shadow:
         0 2px 7px rgba(0,0,0,.55);
-
-    flex-shrink: 0;
-}
-
-
-/* كل فقرة مستقلة */
-
-.message-text p {
-    margin: 0 0 4.8% 0;
-
-    padding: 0;
-
-    line-height: 1.45;
-}
-
-
-/* آخر فقرة بدون margin إضافي */
-
-.message-text p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   SECOND GOLD DIVIDER
-========================================================= */
-
-.message-ending-divider {
-    position: relative;
-
-    width: 82%;
-
-    height: 1px;
-
-    background:
-        rgba(201,164,92,.58);
-
-    margin-top: 4.5%;
-
-    margin-bottom: 3.8%;
-
-    flex-shrink: 0;
-
-    z-index: 3;
-}
-
-.message-ending-divider::after {
-    content: "";
-
-    position: absolute;
-
-    left: 50%;
-
-    top: 50%;
-
-    width: 7px;
-
-    height: 7px;
-
-    background:
-        var(--gold);
-
-    transform:
-        translate(-50%, -50%)
-        rotate(45deg);
 }
 
 
@@ -753,39 +637,7 @@ body {
 ========================================================= */
 
 .message-ending {
-    position: relative;
-
-    display: block;
-
-    z-index: 2;
-
-    width: 100%;
-
-    color: var(--gold-light);
-
-    font-family:
-        "Amiri",
-        serif;
-
-    font-size:
-        clamp(
-            12px,
-            1.95vw,
-            18px
-        );
-
-    font-weight: 400;
-
-    line-height: 1.65;
-
-    text-align: center;
-
-    white-space: nowrap;
-
-    text-shadow:
-        0 2px 7px rgba(0,0,0,.55);
-
-    flex-shrink: 0;
+    display: none;
 }
 
 
@@ -800,7 +652,6 @@ body {
 
 /* =========================================================
    PAGE 3
-   نفس الكود الأساسي بدون تعديل
 ========================================================= */
 
 .page3-content {
@@ -855,6 +706,10 @@ body {
     transform: translateY(-50%);
 }
 
+
+/* =========================================================
+   POSITIONS
+========================================================= */
 
 .detail:nth-child(1) {
     top: 25%;
@@ -1196,76 +1051,50 @@ body {
 
         height: 71%;
 
-        padding:
-            7.5% 5.5% 5%;
+        padding: 8% 6%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
 
         justify-content: flex-start;
+
+        text-align: center;
+
+        overflow: hidden;
     }
 
 
     .basmala {
+        width: 100%;
+
         font-size: 17px;
 
         line-height: 1.35;
 
-        margin-bottom: 4.5%;
+        margin-bottom: 5%;
     }
 
 
     .quran-verse {
+        width: 100%;
+
         font-size: 12.5px;
 
         line-height: 1.9;
 
-        margin-bottom: 5%;
+        margin-bottom: 7%;
     }
 
-
-    .message-divider {
-        width: 82%;
-
-        margin-bottom: 5%;
-    }
-
-
-    /* =====================================================
-       المسافات مثل الصورة
-    ===================================================== */
 
     .message-text {
-        width: 96%;
+        width: 94%;
 
         font-size: 12.8px;
 
-        line-height: 1.45;
-    }
-
-
-    .message-text p {
-        margin-bottom: 5%;
-    }
-
-
-    .message-text p:last-child {
-        margin-bottom: 0;
-    }
-
-
-    .message-ending-divider {
-        width: 82%;
-
-        margin-top: 4.8%;
-
-        margin-bottom: 3.8%;
-    }
-
-
-    .message-ending {
-        font-size: 12.5px;
-
-        line-height: 1.65;
-
-        white-space: nowrap;
+        line-height: 2.05;
     }
 
 
@@ -1275,10 +1104,12 @@ body {
 
 
     /* =====================================================
-       PAGE 3 — لم يتم تغييرها
+       PAGE 3 — MOBILE
     ===================================================== */
 
     .details-list {
+        position: absolute;
+
         inset: 0;
 
         width: 100%;
@@ -1292,9 +1123,19 @@ body {
 
         width: 57%;
 
+        height: auto;
+
         transform: translateY(-50%);
 
-        height: auto;
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        text-align: right;
     }
 
 
@@ -1321,6 +1162,8 @@ body {
     .detail-label {
         font-size: 15px;
 
+        line-height: 1.2;
+
         margin-bottom: 2%;
     }
 
@@ -1339,6 +1182,8 @@ body {
 
     .detail.children .detail-value {
         font-size: 15px;
+
+        line-height: 1.25;
     }
 
 
@@ -1397,63 +1242,41 @@ body {
     }
 
 
-    /* PAGE 2 */
+    /* =====================================================
+       PAGE 2
+    ===================================================== */
 
     .message-box {
         top: 10%;
 
         height: 72%;
 
-        padding:
-            6% 5.5% 5%;
+        padding: 7% 6%;
+
+        justify-content: center;
     }
 
 
     .basmala {
-        margin-bottom: 3%;
+        margin-bottom: 4%;
     }
 
 
     .quran-verse {
-        line-height: 1.8;
+        line-height: 1.85;
 
-        margin-bottom: 4%;
-    }
-
-
-    .message-divider {
-        margin-bottom: 4%;
+        margin-bottom: 6%;
     }
 
 
     .message-text {
-        line-height: 1.45;
+        line-height: 1.95;
     }
 
 
-    .message-text p {
-        margin-bottom: 4.8%;
-    }
-
-
-    .message-text p:last-child {
-        margin-bottom: 0;
-    }
-
-
-    .message-ending-divider {
-        margin-top: 4%;
-
-        margin-bottom: 3%;
-    }
-
-
-    .message-ending {
-        font-size: 12px;
-    }
-
-
-    /* PAGE 3 */
+    /* =====================================================
+       PAGE 3
+    ===================================================== */
 
     .detail:nth-child(1) {
         top: 24%;
@@ -1618,35 +1441,14 @@ img {
             </div>
 
 
-            <div class="message-divider"></div>
-
-
             <div class="message-text">
-
-                <p>
-                    الأهل والأحبة والأصدقاء الكرام،
-                </p>
-
-                <p>
-                    يغمرنا الفرح والسرور، ويحلو اللقاء بوجود من نحب.
-                </p>
-
-                <p>
-                    يسرنا أن نشارككم لحظات العمر السعيدة،
-                </p>
-
-                <p>
-                    ونتشرف بدعوتكم لحضور حفل زفافنا المبارك.
-                </p>
-
-            </div>
-
-
-            <div class="message-ending-divider"></div>
-
-
-            <div class="message-ending">
-                وبحضوركم تكتمل فرحتنا ويأنس سرورنا.
+                الأهل والأحبة والأصدقاء الكرام،
+                <br>
+                يغمرنا الفرح والسرور، ويحلو اللقاء بوجود من نحب.
+                <br>
+                يسرنا أن نشارككم لحظات العمر السعيدة،
+                <br>
+                ونتشرف بدعوتكم لحضور حفل زفافنا المبارك.
             </div>
 
 
